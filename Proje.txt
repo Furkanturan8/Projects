@@ -1,0 +1,250 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Proje_Bilgi_Yarışması
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+    }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+        int soruno=0, dogru=0, yanlis=0;
+
+
+        private void btnB_Click(object sender, EventArgs e)
+        {
+            btnA.Enabled = false;
+            btnB.Enabled = false;
+            btnC.Enabled=false;
+            btnD.Enabled = false;
+            btnsonraki.Enabled = true;
+
+
+            label8.Text = btnB.Text;
+            if (label7.Text == label8.Text)
+            {
+                dogru++;
+                lbldogru.Text = dogru.ToString();
+                pictureBox1.Visible = true;
+            }
+            else
+            {
+                yanlis++;
+                lblyanlis.Text = yanlis.ToString();
+                pictureBox2.Visible = true;
+            }
+
+        }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            btnA.Enabled = false;
+            btnB.Enabled = false;
+            btnC.Enabled = false;
+            btnD.Enabled = false;
+            btnsonraki.Enabled = true;
+
+
+            label8.Text = btnC.Text;
+            if (label7.Text == label8.Text)
+            {
+                dogru++;
+                lbldogru.Text = dogru.ToString();
+                pictureBox1.Visible = true;
+            }
+            else
+            {
+                yanlis++;
+                lblyanlis.Text = yanlis.ToString();
+                pictureBox2.Visible = true;
+            }
+        }
+
+        private void btnD_Click(object sender, EventArgs e)
+        {
+            btnA.Enabled = false;
+            btnB.Enabled = false;
+            btnC.Enabled = false;
+            btnD.Enabled = false;
+            btnsonraki.Enabled = true;
+
+
+            label8.Text = btnD.Text;
+            if (label7.Text == label8.Text)
+            {
+                dogru++;
+                lbldogru.Text = dogru.ToString();
+                pictureBox1.Visible = true;
+            }
+            else
+            {
+                yanlis++;
+                lblyanlis.Text = yanlis.ToString();
+                pictureBox2.Visible = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnA.Enabled = false;
+            btnB.Enabled = false;
+            btnC.Enabled = false;
+            btnD.Enabled = false;
+            btnsonraki.Enabled = true;
+
+            label8.Text = btnA.Text;
+            if (label7.Text == label8.Text)
+            {
+                dogru++;
+                lbldogru.Text = dogru.ToString();
+                pictureBox1.Visible = true;
+            }
+            else
+            {
+                yanlis++;
+                lblyanlis.Text = yanlis.ToString();
+                pictureBox2.Visible = true;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            btnA.Visible = true;
+            btnB.Visible = true;
+            btnC.Visible = true;
+            btnD.Visible = true;
+
+            btnA.Enabled = true;
+            btnB.Enabled = true;
+            btnC.Enabled = true;
+            btnD.Enabled = true;
+            btnsonraki.Enabled = false;
+            pictureBox2.Visible = false;
+            pictureBox1.Visible = false;
+            
+
+            soruno++;
+            lblsoruno.Text=soruno.ToString();
+           
+
+           
+            if (soruno == 1)
+            {
+                richTextBox1.Text = "Satıcıya bu powerbank'in beyaz rengi var mı? \nDiye soran bir müşterinin elinde tuttuğu şey nedir?";
+                btnA.Text = "Perde";
+                btnB.Text = "Tava";
+                btnC.Text = "Taşınabilir şarj cihazı";
+                btnD.Text = "kalem";
+                label7.Text = "Taşınabilir şarj cihazı";
+            }
+            if (soruno == 3)
+            {
+                richTextBox1.Text = "Biyoloji dersinde başlıkları mayoz ve mitoz olan bölümler hangi konuya aittir?";
+                btnA.Text = "sinir sistemi";
+                btnB.Text = "solunum sistemi";
+                btnC.Text = "duyu organları";
+                btnD.Text = "hücre bölünmesi";
+                label7.Text = "hücre bölünmesi";
+            }
+            if(soruno == 2)
+            {
+                richTextBox1.Text = "Okullarda dünyanın yuvarlak olduğunu anlatırken hangi taşıma aracın direği önce göründüğü söylenir?";
+                btnA.Text = "Gemi ";
+                btnB.Text = "Tranvay ";
+                btnC.Text = "Minibüs ";
+                btnD.Text = "Tren ";
+                label7.Text = "Gemi ";
+            }
+            if(soruno==4)
+            {
+                richTextBox1.Text = "Dinler arasında “Davut Yıldızı” sembolünün mensup olduğu din hangisidir? ";
+                btnA.Text = "İslam ";
+                btnB.Text = "Hristiyan ";
+                btnC.Text = "Ateist ";
+                btnD.Text = "Musevilik ";
+                label7.Text = "Musevilik ";
+            }
+            if (soruno == 5)
+            {
+                richTextBox1.Text = "İlk defa dünya haritasını kim çizmiştir ?";
+                btnA.Text = "Cezeri";
+                btnB.Text = "Piri Reis";
+                btnC.Text = "Evliya Çelebi ";
+                btnD.Text = "Barbaros Hayrettin Paşa ";
+                label7.Text = "Piri Reis";
+            }
+            if (soruno == 8)
+            {
+                richTextBox1.Text = "Fransa ile İngiltere’yi birbirine bağlayan tünelin adı nedir?";
+                btnA.Text = "Gotthard Base Tüneli ";
+                btnB.Text = "Bund Tanzara Tüneli ";
+                btnC.Text = "Hezekiah Tüneli ";
+                btnD.Text = "Manch Tüneli";
+                label7.Text = "Manch Tüneli";
+            }
+            if (soruno == 6)
+            {
+                richTextBox1.Text = " Genellikle yeni ismi ile anılan Hatay ilimizin eski ismi nedir?";
+                btnA.Text = "Antakya";
+                btnB.Text = "Savran ";
+                btnC.Text = "Otrar ";
+                btnD.Text = "Bozok ";
+                label7.Text = "Antakya";
+            }
+            if (soruno == 7)
+            {
+                richTextBox1.Text = "Toros Dağları Türkiye’nin hangi bölgesindedir ?";
+                btnA.Text = "Karadeniz ";
+                btnB.Text = "Ege ";
+                btnC.Text = "Akdeniz";
+                btnD.Text = "Marmara ";
+                label7.Text = "Akdeniz";
+            }
+            if (soruno == 9)
+            {
+                richTextBox1.Text = "Olimpiyatlarda ilk birinciliğimiz hangi olimpiyattadır?";
+                btnA.Text = "1908 Birleşik Krallık Londra ";
+                btnB.Text = "1936 Berlin ";
+                btnC.Text = "1988 Güney Kore Seul ";
+                btnD.Text = "1994 Norveç Lillehammer ";
+                label7.Text = "1936 Berlin ";
+            }
+            if (soruno == 10)
+            {
+                richTextBox1.Text = "Dünya kupasını ilk kez kim kazanmıştır?";
+                btnA.Text = "Uruguay ";
+                btnB.Text = "Brezilya ";
+                btnC.Text = "Arjantin ";
+                btnD.Text = "Almanya ";
+                label7.Text = "Uruguay ";
+                btnsonraki.Text = "Sonuçlar";
+            }
+            if(soruno==11)
+            {
+                btnA.Enabled = false;
+                btnB.Enabled = false;
+                btnC.Enabled = false;
+                btnD.Enabled = false;
+                btnsonraki.Enabled = false;
+                MessageBox.Show("Testimiz Bitmiştir.Teşekkür ederiz." + "\n" + "Doğru:"  +dogru + "\n" + "Yanlış: " + yanlis);
+            }
+        }
+    }
+}
